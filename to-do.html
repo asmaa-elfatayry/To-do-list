@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="to-do.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Document</title>
+</head>
+<body>
+    
+    <main>
+        <!--add-->
+        <section class="add-task">
+            <form id="form">
+                <h1><span class="text">TODO</span>List</h1>
+                <div class="adding">
+                    <input class="input" type="text" placeholder="What Do You Want To Do....">
+                    <button class="addbutton" title="add new item" type="submit"><i class="fa fa-plus" style="font-size:18px;color:#ffff00"></i></button>
+                    
+                </div>
+            </form>
+        </section>
+        <!-- container-->
+       
+        <section class="items">
+            <div class="items-list">
+                <h2>My Todo List</h2>
+                <button class="button-clear" id="clear" title="clear all items" >clear</button>
+             </div>
+            
+                <hr>
+                <!-- warn messge -->
+             <p class="warn">Please add task !</p>
+
+             <div class="task-body">
+                <ul  class="showTask" id="parent">
+                  
+                </ul>
+             </div>
+            
+        </section>
+    </main>
+    <script src="to-do.js"></script>
+</body>
+</html>

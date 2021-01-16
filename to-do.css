@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Hind:wght@500&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: "Roboto", sans-serif;
+    background: #111;
+    min-height: 100vh;
+  }
+  .add-task{
+     margin: 40px 0 20px 0;
+  }
+  .add-task h1{
+      font-size: 3rem ;
+      font-weight: 50 ;
+      margin:1rem 3rem  ;
+      text-align: center;
+      color: #fff;
+      font-family:'Hind',sans-serif;
+  }
+  .add-task .text{
+      font-weight: 800;
+      color: #ffff00;
+  }
+  .add-task .adding{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+  }
+  .add-task .adding .input{
+      padding: 0.5rem 1rem ;
+      height:50px ;
+      outline: none;
+      background-color: #fff;
+      width: 450px;
+      font-size: 1.15rem;
+      margin: 0.25rem;
+      border-radius:25px ;
+
+  }
+  .adding .addbutton{
+      height: 50px;
+      width: 50px;
+      border-radius: 25px;
+      outline: none;
+      border: none;
+      background-color: #fff;
+      color: #ffff00;
+      margin: .25px;
+      cursor: pointer;
+  }
+  .items{
+    margin: auto;
+    width: 30%;
+    color: #fff;
+    padding-top: 20px;
+  }
+  .items .items-list{
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    position: relative;
+  }
+  .items .items-list .button-clear{
+    width: 80px;
+    height: 30px;
+    font-size: 16px;
+    color: #fff;
+    border: none;
+    outline: none;
+    background-color: #a83e3e;
+    cursor: pointer;
+    margin-bottom: 7px;
+  }
+  
+  .items .task-body{
+      padding: 10px 0;
+  }
+     
+  .listyle{
+    font-family:'Hind',sans-serif;
+    width: 95%;
+    background-color: rgba(197, 192, 192, 0.5);
+    padding: 10px;
+    margin: 6px 0;
+    color: #212222;
+    font-weight: bold;
+    list-style: none;
+    display: flex;
+  }
+  
+  .items .task-body .showTask .listyle input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    margin-bottom: 7px;
+    margin-right: 6px;
+  }
+  .items .task-body .showTask .listyle input[type="checkbox"]:focus + label {
+    text-decoration: line-through;
+  }
+
+  .items .warn {
+   
+    display: none;
+    background-color: #a83e3e;
+    color: #fff;
+    padding: 8px;
+    border-radius: 8px;
+    width: 35%;
+    margin-left: 10px;
+    margin-top: 10px;
+    -webkit-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+  }
