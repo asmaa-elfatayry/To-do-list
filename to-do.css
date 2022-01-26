@@ -10,6 +10,10 @@
     background: #111;
     min-height: 100vh;
   }
+  .container{
+    width: 80%;
+    margin: auto;
+  }
   .add-task{
      margin: 40px 0 20px 0;
   }
@@ -36,7 +40,7 @@
       height:50px ;
       outline: none;
       background-color: #fff;
-      width: 450px;
+      width: 500px;
       font-size: 1.15rem;
       margin: 0.25rem;
       border-radius:25px ;
@@ -53,12 +57,36 @@
       margin: .25px;
       cursor: pointer;
   }
+  @media(max-width:530px){
+    .adding .addbutton{
+      height: 50px;
+      width: 50px;
+      padding: 0px 15px;
+      border-radius: 50%;
+    
+  }
+  }
   .items{
     margin: auto;
-    width: 30%;
+    width: 420px;
     color: #fff;
     padding-top: 20px;
   }
+  @media(max-width:600px){
+.container{
+  width: 97%;
+}
+.add-task .adding .input{
+  width: 500px;
+}
+.items{
+width: 80%;
+}
+.items .warn {
+  width: 60%;
+}
+  }
+
   .items .items-list{
     display: flex;
     -webkit-box-pack: justify;
@@ -84,7 +112,7 @@
      
   .listyle{
     font-family:'Hind',sans-serif;
-    width: 95%;
+    width: 98%;
     background-color: rgba(197, 192, 192, 0.5);
     padding: 10px;
     margin: 6px 0;
@@ -92,11 +120,12 @@
     font-weight: bold;
     list-style: none;
     display: flex;
+    justify-content: space-between;
   }
-  
+ 
   .items .task-body .showTask .listyle input[type="checkbox"] {
     width: 20px;
-    height: 20px;
+    height: 14px;
     margin-bottom: 7px;
     margin-right: 6px;
   }
@@ -105,15 +134,28 @@
   }
 
   .items .warn {
-   
     display: none;
     background-color: #a83e3e;
     color: #fff;
     padding: 8px;
     border-radius: 8px;
-    width: 35%;
+    width: 40%;
     margin-left: 10px;
     margin-top: 10px;
     -webkit-transition: all 0.4s ease-in-out;
     transition: all 0.4s ease-in-out;
+  }
+  @media(max-width:600px){
+    .items .warn{
+      width: 50%;
+    }
+
+  }
+  /*delete each elelment  */
+  .DelEle{
+    color: #cfcfcf;
+    cursor: pointer;
+    font-weight: bold;
+    padding:0px 5px;
+
   }
