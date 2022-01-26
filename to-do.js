@@ -12,6 +12,7 @@ form.addEventListener("submit",function(e){
         warnMsg();
     } else{
         addElement();
+        document.querySelector('.adding input').value=" ";
     }
 })
 //function add element
@@ -19,12 +20,35 @@ function addElement(){
     let newLi=document.createElement("li");
     let checkbox=document.createElement("input");
     let label =document.createElement("label");
+    let del=document.createElement("div");
+    let Xtex=document.createTextNode("X");
+    let containerdiv=document.createElement("div");
+    del.append(Xtex);
     checkbox.type="checkbox";
     label.innerHTML=input.value;
-    newLi.append(checkbox,label);
+     containerdiv.append(checkbox,label);
+    newLi.append(containerdiv,del);
     result.appendChild(newLi);
+    del.classList.add('DelEle');
     newLi.classList.add("listyle")
     checkbox.style.cursor="pointer";
+    // del ele
+
+    let allRem=document.querySelectorAll('.DelEle');
+    // add index to all elelment
+    for(let i=0;i<allRem.length;i++){
+        allRem[i].parentElement.classList.add(i);
+    }
+  
+ 
+//  delete element
+for(let i=0;i<allRem.length;i++){
+  allRem[i].addEventListener("click",function(){
+    //   allRem[this.parentElement.classList[1]].remove();
+      allRem[this.parentElement.classList[1]].parentNode.remove();
+  })
+}
+
 }
 //function warn
 function  warnMsg(){
@@ -45,3 +69,6 @@ function removeFunction(){
  item.remove();
 }
 
+document.querySelector('.DelEle').addEventListener("click",function(){
+    this.parent.remove();
+})
